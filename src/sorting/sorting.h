@@ -6,6 +6,6 @@
 
 #define SORTING_H 1
 
-std::vector<int> bubble(std::vector<int> vector);
+std::vector<int> bubbleSort(std::vector<int> vector);
 
 #endif
