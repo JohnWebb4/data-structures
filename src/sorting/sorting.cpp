@@ -1,10 +1,10 @@
 #include "./sorting.h"
 
-// Sort the array using bubble sort
+// Sort array using bubble sort
 // Size Complexity: O(1)
 // Time Complexity: O(n^2)
 std::vector<int> bubbleSort(std::vector<int> vector) {
-  unsigned int size = vector.size();
+  const unsigned int size = vector.size();
   bool hasSorted;
 
   while(hasSorted) {
@@ -24,4 +24,28 @@ std::vector<int> bubbleSort(std::vector<int> vector) {
   }
 
   return vector;
+}
+
+// Sort array using selection sort
+// Size Complexity: O(1)
+// Time Complexity: O(n^2)
+std::vector<int> selectionSort(std::vector<int> vector) {
+  const unsigned int size = vector.size();
+  int smallestIndex;
+
+  for (unsigned int i = 0; i < size; i++) {
+    smallestIndex = i;
+
+    // Find smallest element
+    for (unsigned int j = i; j < size; j++) {
+      if (vector[j] < vector[smallestIndex]) {
+        smallestIndex = i;
+      }
+    }
+
+    // Swap with nth element
+    int temp = vector[i];
+    vector[i] = vector[smallestIndex];
+    vector[smallestIndex] = temp;
+  }
 }
