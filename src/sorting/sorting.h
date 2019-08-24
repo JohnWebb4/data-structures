@@ -9,4 +9,6 @@ std::vector<int> bubbleSort(std::vector<int> vector);
 
 std::vector<int> selectionSort(std::vector<int> vector);
 
+std::vector<int> insertionSort(std::vector<int> vector);
+
 #endif

@@ -39,7 +39,7 @@ std::vector<int> selectionSort(std::vector<int> vector) {
     // Find smallest element
     for (unsigned int j = i; j < size; j++) {
       if (vector[j] < vector[smallestIndex]) {
-        smallestIndex = i;
+        smallestIndex = j;
       }
     }
 
@@ -48,4 +48,25 @@ std::vector<int> selectionSort(std::vector<int> vector) {
     vector[i] = vector[smallestIndex];
     vector[smallestIndex] = temp;
   }
+
+  return vector;
+}
+
+std::vector<int> insertionSort(std::vector<int> vector) {
+  std::vector<int> sorted{vector[0]};
+
+  for (unsigned int i = 1; i < vector.size(); i++) {
+    for (unsigned int j = 0; j < sorted.size(); j++) {
+      if (vector[i] < sorted[j]) {
+        sorted.insert(sorted.begin() + j, vector[i]);
+        break;
+      } else if (j == sorted.size() - 1) {
+        // If reached end array, insert at end
+        sorted.push_back(vector[i]);
+        break;
+      }
+    }
+  }
+
+  return sorted;
 }
