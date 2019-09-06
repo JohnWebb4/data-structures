@@ -7,16 +7,14 @@
 std::vector<int> bubbleSort(std::vector<int> vector)
 {
   const unsigned int size = vector.size();
-  bool hasSorted;
+  bool hasSorted = true;
 
   while (hasSorted)
   {
     hasSorted = false;
 
-    for (unsigned int i = 0; i < size; i++)
+    for (unsigned int i = 0; i < size - 1; i++)
     {
-      if (i + 1 < size)
-      {
         if (vector.at(i) > vector.at(i + 1))
         {
           int temp = vector.at(i);
@@ -24,7 +22,6 @@ std::vector<int> bubbleSort(std::vector<int> vector)
           vector[i + 1] = temp;
           hasSorted = true;
         }
-      }
     }
   }
 
@@ -66,7 +63,7 @@ std::vector<int> selectionSort(std::vector<int> vector)
 // Time Complexity: O(N^2)
 std::vector<int> insertionSort(std::vector<int> vector)
 {
-  for (int i = 1; i < vector.size(); i++)
+  for (unsigned int i = 1; i < vector.size(); i++)
   {
     int element = vector.at(i);
     int j = i - 1;
@@ -82,7 +79,7 @@ std::vector<int> insertionSort(std::vector<int> vector)
   return vector;
 }
 
-std::vector<int> merge(std::vector<int> vector, int low, int middle, int high)
+std::vector<int> merge(std::vector<int> &vector, int low, int middle, int high)
 {
   std::vector<int> temp;
   int left = low;
@@ -111,7 +108,7 @@ std::vector<int> merge(std::vector<int> vector, int low, int middle, int high)
   }
 
   // copy back
-  for (int i = 0; i < temp.size(); i++)
+  for (unsigned int i = 0; i < temp.size(); i++)
   {
     vector[i + low] = temp.at(i);
   }
@@ -120,17 +117,17 @@ std::vector<int> merge(std::vector<int> vector, int low, int middle, int high)
 }
 
 // Sort array using merge sort
-// Size Complexity: O(1)
+// Size Complexity: O(N)
 // Time Complexity: O(N log (N))
-std::vector<int> mergeSort(std::vector<int> vector, int low, int high)
+std::vector<int> mergeSort(std::vector<int> &vector, int low, int high)
 {
   if (low < high)
   {
     int middle = (low + high) / 2;
 
-    vector = mergeSort(vector, low, middle);
-    vector = mergeSort(vector, middle + 1, high);
-    vector = merge(vector, low, middle, high);
+    mergeSort(vector, low, middle);
+    mergeSort(vector, middle + 1, high);
+    merge(vector, low, middle, high);
   }
 
   return vector;
