@@ -13,4 +13,6 @@ std::vector<int> insertionSort(std::vector<int> vector);
 
 std::vector<int> mergeSort(std::vector<int> &vector, int low, int high);
 
+std::vector<int> quickSort(std::vector<int> &vector, int low, int high);
+
 #endif

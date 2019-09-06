@@ -79,7 +79,7 @@ std::vector<int> insertionSort(std::vector<int> vector)
   return vector;
 }
 
-std::vector<int> merge(std::vector<int> &vector, int low, int middle, int high)
+void merge(std::vector<int> &vector, int low, int middle, int high)
 {
   std::vector<int> temp;
   int left = low;
@@ -112,8 +112,6 @@ std::vector<int> merge(std::vector<int> &vector, int low, int middle, int high)
   {
     vector[i + low] = temp.at(i);
   }
-
-  return vector;
 }
 
 // Sort array using merge sort
@@ -128,6 +126,40 @@ std::vector<int> mergeSort(std::vector<int> &vector, int low, int high)
     mergeSort(vector, low, middle);
     mergeSort(vector, middle + 1, high);
     merge(vector, low, middle, high);
+  }
+
+  return vector;
+}
+
+int partition(std::vector<int> &vector, int low, int high)
+{
+  int p = vector.at(low);
+  int m = low;
+
+  for (unsigned int k = low + 1; k <= high; k++)
+  {
+    if (vector.at(k) < p)
+    {
+      m++;
+      std::swap(vector[k], vector[m]);
+    }
+  }
+  
+  std::swap(vector[low], vector[m]);
+
+  return m;
+}
+
+// Sort array using quick sort
+// Size Complexity: O(N)
+// Time Complexity: O(N log(N))
+std::vector<int> quickSort(std::vector<int> &vector, int low, int high)
+{
+  if (low < high)
+  {
+    int m = partition(vector, low, high);
+    quickSort(vector, low, m - 1);
+    quickSort(vector, m + 1, high);
   }
 
   return vector;

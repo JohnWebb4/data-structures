@@ -34,3 +34,11 @@ TEST(SortingMergeTest1, Test)
 
   ASSERT_EQ(sorted, mergeSort(vector, 0, vector.size() - 1));
 }
+
+TEST(SortingQuickTest1, Test)
+{
+  std::vector<int> vector{2, 3, 4, 1, 5, 8, 6, 7};
+  std::vector<int> sorted{1, 2, 3, 4, 5, 6, 7, 8};
+
+  ASSERT_EQ(sorted, quickSort(vector, 0, vector.size() - 1));
+}
