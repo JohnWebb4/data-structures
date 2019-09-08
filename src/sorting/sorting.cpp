@@ -1,4 +1,5 @@
 #include <cmath>
+
 #include "./sorting.h"
 
 // Sort array using bubble sort
@@ -15,13 +16,13 @@ std::vector<int> bubbleSort(std::vector<int> vector)
 
     for (unsigned int i = 0; i < size - 1; i++)
     {
-        if (vector.at(i) > vector.at(i + 1))
-        {
-          int temp = vector.at(i);
-          vector[i] = vector.at(i + 1);
-          vector[i + 1] = temp;
-          hasSorted = true;
-        }
+      if (vector.at(i) > vector.at(i + 1))
+      {
+        int temp = vector.at(i);
+        vector[i] = vector.at(i + 1);
+        vector[i + 1] = temp;
+        hasSorted = true;
+      }
     }
   }
 
@@ -144,7 +145,7 @@ int partition(std::vector<int> &vector, int low, int high)
       std::swap(vector[k], vector[m]);
     }
   }
-  
+
   std::swap(vector[low], vector[m]);
 
   return m;

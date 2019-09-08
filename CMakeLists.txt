@@ -8,6 +8,7 @@ include_directories(${GTEST_INCLUDE_DIRS})
 set(SOURCE 
   ./src/tests.cpp
   ./src/sorting/sorting.cpp
+  ./src/bitmask/bitmask.cpp
 )
 
 # Link tests
