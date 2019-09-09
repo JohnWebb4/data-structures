@@ -9,6 +9,7 @@ set(SOURCE
   ./src/tests.cpp
   ./src/sorting/sorting.cpp
   ./src/bitmask/bitmask.cpp
+  ./src/linkedList/linkedList.cpp
 )
 
 # Link tests
