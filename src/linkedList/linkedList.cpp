@@ -54,6 +54,25 @@ void LinkedList::insert(int value, unsigned int index)
   current->next = newNode;
 }
 
+void LinkedList::remove(LinkedList *node)
+{
+  LinkedList *previous = this;
+  LinkedList *current = this;
+
+  while (current != nullptr)
+  {
+
+    if (current == node)
+    {
+      previous->next = current->next;
+      break;
+    }
+
+    previous = current;
+    current = current->next;
+  }
+}
+
 bool operator==(LinkedList list1, LinkedList list2)
 {
   bool isEqual = list1.value == list2.value;

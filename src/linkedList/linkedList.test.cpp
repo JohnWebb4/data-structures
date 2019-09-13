@@ -44,3 +44,14 @@ TEST(LinkedListInsert2, Test)
 
   delete list.next;
 }
+
+TEST(LinkedListRemove1, Test)
+{
+  LinkedList node1(1, nullptr);
+  LinkedList node2(2, &node1);
+  LinkedList list(3, &node2);
+
+  list.remove(&node1);
+
+  ASSERT_EQ(nullptr, list.next->next);
+}

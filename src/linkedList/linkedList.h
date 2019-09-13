@@ -10,6 +10,7 @@ public:
   LinkedList(int value, LinkedList *next);
   int search(int value);
   void insert(int value, unsigned int index);
+  void remove(LinkedList *node);
 };
 
 bool operator==(LinkedList list1, LinkedList list2);
