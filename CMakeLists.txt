@@ -10,6 +10,7 @@ set(SOURCE
   ./src/sorting/sorting.cpp
   ./src/bitmask/bitmask.cpp
   ./src/linkedList/linkedList.cpp
+  ./src/hashMap/hashMap.cpp
 )
 
 # Link tests

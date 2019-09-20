@@ -25,9 +25,11 @@ cmake .
 
 ## Structures
 
-| Structure |
-| --------- |
-| Sorting   |
+| Structure   |
+| ----------- |
+| Sorting     |
+| Linked List |
+| Hash Map    |
 
 ## License
 
