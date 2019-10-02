@@ -2,7 +2,7 @@
 
 #include "./linkedList/linkedList.h"
 
-TEST(LinkedListCreate1, Test)
+TEST(LinkedListTest, Create)
 {
   LinkedList list(1, nullptr);
 
@@ -10,7 +10,7 @@ TEST(LinkedListCreate1, Test)
   ASSERT_EQ(nullptr, list.next);
 }
 
-TEST(LinkedListSearch1, Test)
+TEST(LinkedListTest, Search)
 {
   LinkedList node1(4, nullptr);
   LinkedList node2(3, &node1);
@@ -20,7 +20,7 @@ TEST(LinkedListSearch1, Test)
   ASSERT_EQ(2, list.search(3));
 }
 
-TEST(LinkedListInsert1, Test)
+TEST(LinkedListTest, Insert)
 {
   LinkedList node1(4, nullptr);
   LinkedList node2(3, &node1);
@@ -33,7 +33,7 @@ TEST(LinkedListInsert1, Test)
   delete list.next;
 }
 
-TEST(LinkedListInsert2, Test)
+TEST(LinkedListTest, Insert1)
 {
   LinkedList list(1, nullptr);
 
@@ -45,7 +45,7 @@ TEST(LinkedListInsert2, Test)
   delete list.next;
 }
 
-TEST(LinkedListRemove1, Test)
+TEST(LinkedListTest, Remove)
 {
   LinkedList node1(1, nullptr);
   LinkedList node2(2, &node1);

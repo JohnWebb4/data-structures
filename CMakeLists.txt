@@ -6,11 +6,12 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
 set(SOURCE 
-  ./src/tests.cpp
-  ./src/sorting/sorting.cpp
+  ./src/binaryHeap/binaryHeap.cpp
   ./src/bitmask/bitmask.cpp
-  ./src/linkedList/linkedList.cpp
   ./src/hashMap/hashMap.cpp
+  ./src/linkedList/linkedList.cpp
+  ./src/sorting/sorting.cpp
+  ./src/tests.cpp
 )
 
 # Link tests

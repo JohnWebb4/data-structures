@@ -2,7 +2,7 @@
 
 #include "./hashMap.h"
 
-TEST(HashMapGet1, Test)
+TEST(HashMapTest, Set)
 {
   HashMap hashMap(10);
 
