@@ -7,6 +7,7 @@ include_directories(${GTEST_INCLUDE_DIRS})
 
 set(SOURCE 
   ./src/binaryHeap/binaryHeap.cpp
+  ./src/binarySearchTree/binarySearchTree.cpp
   ./src/bitmask/bitmask.cpp
   ./src/hashMap/hashMap.cpp
   ./src/linkedList/linkedList.cpp

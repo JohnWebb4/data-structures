@@ -17,6 +17,13 @@ git clone https://github.com/JohnWebb4/data-structures.git
 cd data-structures
 ```
 
+Run setup
+
+```
+./setup.sh
+
+```
+
 Build the project
 
 ```sh
@@ -25,11 +32,13 @@ cmake .
 
 ## Structures
 
-| Structure   |
-| ----------- |
-| Sorting     |
-| Linked List |
-| Hash Map    |
+| Structure          |
+| ------------------ |
+| Binary Search Tree |
+| Bit Mask           |
+| Hash Map           |
+| Linked List        |
+| Sorting            |
 
 ## License
 

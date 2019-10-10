@@ -3,6 +3,7 @@
 #include "./hashMap/hashMap.test.cpp"
 #include "./linkedList/linkedList.test.cpp"
 #include "./sorting/sorting.test.cpp"
+#include "./binarySearchTree/binarySearchTree.test.cpp"
 
 int main(int argc, char **argv)
 {
