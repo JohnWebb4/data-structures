@@ -37,6 +37,7 @@ cmake .
 | Binary Search Tree |
 | Bit Mask           |
 | Hash Map           |
+| Graph              |
 | Linked List        |
 | Sorting            |
 

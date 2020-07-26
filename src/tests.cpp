@@ -1,5 +1,6 @@
 #include "./binaryHeap/binaryHeap.test.cpp"
 #include "./bitmask/bitmask.test.cpp"
+#include "./graph/graph.test.cpp"
 #include "./hashMap/hashMap.test.cpp"
 #include "./linkedList/linkedList.test.cpp"
 #include "./sorting/sorting.test.cpp"
