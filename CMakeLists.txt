@@ -10,6 +10,7 @@ set(SOURCE
   ./src/binaryHeap/binaryHeap.cpp
   ./src/binarySearchTree/binarySearchTree.cpp
   ./src/bitmask/bitmask.cpp
+  ./src/disjointedSets/disjointedSets.cpp
   ./src/graph/graph.cpp
   ./src/graph/graphEdge.cpp
   ./src/graph/graphNode.cpp

@@ -36,6 +36,7 @@ cmake .
 | ------------------ |
 | Binary Search Tree |
 | Bit Mask           |
+| Disjointed Sets    |
 | Hash Map           |
 | Graph              |
 | Linked List        |
